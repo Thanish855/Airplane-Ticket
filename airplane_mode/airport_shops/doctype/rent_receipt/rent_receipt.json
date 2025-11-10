@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-05 10:44:55.592139",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_tenant_id",
+  "shop_tenant_name",
+  "shop_name",
+  "shop_number",
+  "rent_date",
+  "year",
+  "rent_amount",
+  "airport_name",
+  "rent_due_date",
+  "email"
+ ],
+ "fields": [
+  {
+   "fetch_from": "shop_tenant_id.shop_name",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name"
+  },
+  {
+   "fetch_from": "shop_tenant_id.shop_number",
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop number"
+  },
+  {
+   "fieldname": "rent_date",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "Jan\nFeb\nMar\nApr\nMay\nJune\nJul\nAug\nSep\nOct\nNov\nDec"
+  },
+  {
+   "fetch_from": "shop_tenant_id.rent_amount",
+   "fieldname": "rent_amount",
+   "fieldtype": "Data",
+   "label": "Rent Amount"
+  },
+  {
+   "fetch_from": "shop_tenant_id.airport_name",
+   "fieldname": "airport_name",
+   "fieldtype": "Data",
+   "label": "Airport Name",
+   "options": "Shop Details"
+  },
+  {
+   "fieldname": "shop_tenant_id",
+   "fieldtype": "Link",
+   "label": "Shop tenant id",
+   "options": "Shop Details"
+  },
+  {
+   "fetch_from": "shop_tenant_id.name1",
+   "fieldname": "shop_tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop tenant name"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
+   "fieldname": "rent_due_date",
+   "fieldtype": "Date",
+   "label": "Rent due date"
+  },
+  {
+   "fetch_from": "shop_tenant_id.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-05 14:39:26.458001",
+ "modified_by": "Administrator",
+ "module": "Airport shops",
+ "name": "Rent Receipt",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-11-05 12:01:35.477856",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"airport_name\",\"Shop Details\"],[\"_aggregate_column\",\"Shop Details\"]],\"order_by\":\"`tabShop Details`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"airport_name\":120,\"_aggregate_column\":200},\"group_by\":{\"group_by\":\"`tabShop Details`.`airport_name`\",\"aggregate_function\":\"count\",\"aggregate_on\":null}}",
+ "letterhead": null,
+ "modified": "2025-11-05 12:05:16.191567",
+ "modified_by": "Administrator",
+ "module": "Airport shops",
+ "name": "no of shops in airport",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Shop Details",
+ "report_name": "no of shops in airport",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

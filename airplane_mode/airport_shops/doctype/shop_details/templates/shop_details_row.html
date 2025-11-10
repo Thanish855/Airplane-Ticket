@@ -1,0 +1,9 @@
+<head>
+	{{ include_style("/assets/airplane_mode/css/airplane.css") }}
+</head>
+<div>
+	{% set shop_name=frappe.db.get_single_value("Shop Details","shop_name") %} 
+	<a href="{{ doc.route }}">{{doc.shop_name}}</a>
+	<a href="{{ doc.route }}"></a>
+</div>
+<!-- this is a sample default list template -->

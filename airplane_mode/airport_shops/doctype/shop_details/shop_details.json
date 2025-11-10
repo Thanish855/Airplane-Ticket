@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "creation": "2025-11-05 10:22:28.033898",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_information_section",
+  "name1",
+  "phone_number",
+  "column_break_higv",
+  "email",
+  "airport_name",
+  "contract_details_section",
+  "rent_amount",
+  "column_break_ibdc",
+  "date_of_expiry",
+  "shops_section",
+  "shop_name",
+  "column_break_ehaf",
+  "shop_number",
+  "physical_props_section",
+  "area_of_shop",
+  "shop_status",
+  "is_published",
+  "route",
+  "shop_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Information"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date Of Expiry"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_higv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ibdc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shops_section",
+   "fieldtype": "Section Break",
+   "label": "Shops"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name"
+  },
+  {
+   "fieldname": "column_break_ehaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Int",
+   "label": "Shop Number"
+  },
+  {
+   "fieldname": "physical_props_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Props"
+  },
+  {
+   "fieldname": "area_of_shop",
+   "fieldtype": "Data",
+   "label": "Area Of Shop"
+  },
+  {
+   "fieldname": "airport_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport Name",
+   "options": "Airport"
+  },
+  {
+   "default": "Available",
+   "fieldname": "shop_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "shop status",
+   "options": "Available\nOccupied"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is_published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Link",
+   "label": "shop type",
+   "options": "Shop Type"
+  }
+ ],
+ "grid_page_length": 50,
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2025-11-07 10:07:48.306722",
+ "modified_by": "Administrator",
+ "module": "Airport shops",
+ "name": "Shop Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shops",
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "shop_number",
+ "translated_doctype": 1
+}

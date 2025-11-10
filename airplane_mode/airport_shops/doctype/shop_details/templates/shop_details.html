@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{{ include_style("/assets/airplane_mode/css/airplane.css") }}
+
+<h2>Shop Details</h2>
+<h3>Shop ID:{{doc.name}}</h3>
+<ul type="circle">
+     {% if doc.shop_status == "Occupied" %}
+    <li>Tenant Name:{{doc.name1}}</li>
+    {% endif %}
+    <li>Shop Name:{{doc.shop_name}}</li>
+    <li>Shop Number:{{doc.shop_number}}</li>
+    <li>Shop Status:{{doc.shop_status}}</li>
+    <li>Airport:{{doc.airport_name}}</li>
+    {% if doc.shop_status == "Available" %}
+    <a href="/shop-leading-form/new?shop_details={{doc.shop_number}}&airport_name={{doc.airport_name}}"><button>Interested</button></a>
+    {% else %}
+    <button disabled>Not Available</button>
+    {% endif %}
+</ul>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

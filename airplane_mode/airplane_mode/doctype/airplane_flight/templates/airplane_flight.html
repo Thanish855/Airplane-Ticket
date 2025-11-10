@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<h1>{{doc.name}}</h1><br><br><br>
+<h1>Flight Details</h1>
+<ul type="disk" style="color: gray;">
+    <li>{% set airline=frappe.db.get_value("Airplane",doc.airplane,"airline") %} Airline:{{airline}}</li>
+    <li>{{doc.source_airport_code}}&rarr;{{doc.destination_airport_code}}</li>
+    <li>{{doc.date_of_departure}}|{{doc.time_of_departure}}</li>
+    <li>{% set total_seconds = doc.duration %} {% set hours = (total_seconds // 3600)|int %} {% set minutes = ((total_seconds % 3600) // 60)|int %} {{ hours }}h {{ minutes }}m</li>
+
+</ul>
+<div style="height: 35px;width: 110px;background-color: blue;border-radius: 10px;">
+    <a href="/book-flight/new?flight={{doc.name}}" style="color: white;position: relative;top: 5px;">&nbsp;&nbsp;&nbsp;BookFlight</a>
+</div>
+
+{% endblock %}
+ 

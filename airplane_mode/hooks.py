@@ -10,6 +10,8 @@ app_license = "mit"
 
 # required_apps = []
 
+fixtures=[{"dt": "Shop Type", "filters": {"enabled": 1}}]
+
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
@@ -25,7 +27,7 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/airplane_mode/css/airplane_mode.css"
+app_include_css = "/assests/airplane_mode/css/airplane.css"
 # app_include_js = "/assets/airplane_mode/js/airplane_mode.js"
 
 # include js, css files in header of web template
@@ -137,34 +139,22 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Airplane Flight": {
+        "on_update": "airplane_mode.airplane_flight.doctype.airplane_flight.airplane_flight.on_update"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"airplane_mode.tasks.all"
-# 	],
-# 	"daily": [
-# 		"airplane_mode.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"airplane_mode.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"airplane_mode.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"airplane_mode.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+ 	"Cron":{
+        "0 0 5 * *": [
+            "airplane_mode.api.send_rent_due_reminders"
+        ]
+    }
+}
 
 # Testing
 # -------

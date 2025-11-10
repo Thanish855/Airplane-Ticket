@@ -1,0 +1,11 @@
+<div style="border: 1px solid black;border-radius: 20px;background-color:white;">
+	{% set airline=frappe.db.get_value("Airplane",doc.airplane,"airline") %}
+	<p style="position: relative;top: 10px;">&nbsp;&nbsp;{{airline}}</p>
+	<p style="position: relative;top: 5px;">&nbsp;&nbsp;{{doc.source_airport_code}}&rarr;{{doc.destination_airport_code}}</p>
+	{% set total_seconds = doc.duration %}
+	{% set hours = (total_seconds // 3600)|int %}
+	{% set minutes = ((total_seconds % 3600) // 60)|int %}
+	<p>{{ hours }}h {{ minutes }}m</p>
+	<a href={{doc.route}} style="position: relative;bottom: 20px;color: blue;">&nbsp;&nbsp;View Flight</a>
+
+</div>
